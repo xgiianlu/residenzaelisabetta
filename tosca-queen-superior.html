@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen Superior - Appartamento Tosca | Residenza Elisabetta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Residenza Elisabetta</a></div>
+        <ul>
+            <li><a href="index.html#alloggi">← Torna agli Alloggi</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="container">
+        <div class="room-header">
+            <h1>Camera Queen Superior</h1>
+            <p style="color: var(--verona-red); font-style: italic;">Situata nell'elegante Appartamento Tosca</p>
+        </div>
+
+        <section class="gallery-container">
+            <div class="main-photo-container">
+                <img src="img/tosca-queen.jpg" alt="Camera Queen Superior Foto Principale">
+            </div>
+            <div class="side-photos-container">
+                <div class="side-photo-item">
+                    <img src="img/tosca-queen-2.jpg" alt="Dettaglio Camera">
+                </div>
+                <div class="side-photo-item">
+                    <img src="img/tosca-queen-3.jpg" alt="Bagno Camera">
+                </div>
+            </div>
+        </section>
+
+        <section class="room-content">
+            <div class="room-description">
+                <h2>L'atmosfera</h2>
+                <p>La Camera Queen Superior dell'Appartamento Tosca offre un ambiente raffinato dove la storicità del centro di Verona incontra il design moderno. Caratterizzata da ampi spazi e finiture di pregio, è la scelta ideale per chi cerca un soggiorno indimenticabile a pochi passi dall'Arena.</p>
+                
+                <div class="amenities-grid">
+                    <h3>Servizi inclusi</h3>
+                    <ul>
+                        <li>Superficie 22 m²</li>
+                        <li>1 letto matrimoniale large</li>
+                        <li>Letti comodi (punteggio: 9,2) in base a 570 recensioni</li>
+                        <li>Camera matrimoniale dotata di set di cortesia e bagno privato con doccia e asciugacapelli. 
+                            Insonorizzata e affacciata sulla città, la sistemazione dispone di aria condizionata, 
+                            TV a schermo piatto, minibar e set per la preparazione di tè e caffè. 
+                            L’alloggio presenta 1 letto.</li>
+
+                            <li><strong>Fumatori:  è vietato fumare</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="booking-sidebar">
+                <div class="sticky-box">
+                    <p>Ti piace questa stanza?</p>
+                    <a href="https://wa.me/393881221218?text=Buongiorno, vorrei informazioni per la Queen Superior in Appartamento Tosca" class="wa-btn-room" target="_blank">
+                        Verifica disponibilità
+                    </a>
+                    <p style="font-size: 0.8rem; color: #888;">Risposta immediata su WhatsApp</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-brand">
+            <h3>Residenza Elisabetta</h3>
+        </div>
+        
+        <div class="footer-details">
+            <p><strong>Carla Patuzzo S.r.l.</strong></p>
+            <p>Sede: Via Amanti, 9 - 37121 Verona (VR)</p>
+            <p>P.IVA: [La tua Partita IVA]</p>
+            <p>Email: <a href="mailto:residenzaelisabetta@gmail.com" class="footer-email">residenzaelisabetta@gmail.com</a></p>
+        </div>
+
+        <div class="footer-bottom">
+    <p>&copy; 2026 Residenza Elisabetta - Tutti i diritti riservati</p>
+    <p><a href="privacy-policy.html" style="color: #777; text-decoration: underline; font-size: 0.7rem;">Privacy & Cookie Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+<div id="cookie-overlay" class="cookie-modal-overlay">
+    <div class="cookie-card">
+        <div class="cookie-header">
+            <span>🍪</span>
+            <h3>Informativa sui Cookie</h3>
+        </div>
+        <div class="cookie-body">
+            <p>Utilizziamo i cookie per garantire le funzionalità di base del sito web e per migliorare la tua esperienza online. Puoi scegliere per ogni categoria di opt-in/out quando vuoi. Per maggiori dettagli relativi ai cookie e ad altri dati sensibili, leggi la <a href="privacy-policy.html" class="cookie-link">privacy policy</a> completa.</p>
+        </div>
+        <div class="cookie-footer">
+            <button onclick="acceptCookies()" class="btn-cookie accept">Accetto</button>
+            <button onclick="closeCookies()" class="btn-cookie refuse">Solo essenziali</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-overlay').classList.add('show');
+        }
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-overlay').classList.remove('show');
+    }
+
+    function closeCookies() {
+        // Chiude il popup trattando il rifiuto come accettazione dei soli tecnici
+        document.getElementById('cookie-overlay').classList.remove('show');
+    }
+</script>
+
+</body>
+</html>

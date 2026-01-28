@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appartamento con 2 Camere da Letto | Residenza Elisabetta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Residenza Elisabetta</a></div>
+        <ul>
+            <li><a href="index.html#alloggi">← Torna agli Alloggi</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="container">
+        <div class="room-header">
+            <h1>Appartamento con 2 Camere</h1>
+            <p style="color: var(--verona-red); font-style: italic;">Ampio spazio e massima privacy per gruppi o famiglie</p>
+        </div>
+
+        <section class="gallery-container">
+            <div class="main-photo-container">
+                <img src="img/appartamento-2-camere.jpg" alt="Foto Principale Appartamento 2 Camere">
+            </div>
+            <div class="side-photos-container">
+                <div class="side-photo-item">
+                    <img src="img/appartamento-2-camere-2.jpg" alt="Seconda Camera da Letto">
+                </div>
+                <div class="side-photo-item">
+                    <img src="img/appartamento-2-camere-3.jpg" alt="Zona Giorno">
+                </div>
+            </div>
+        </section>
+
+        <section class="room-content">
+            <div class="room-description">
+                <h2>La Struttura</h2>
+                <p>Perfetto per chi viaggia in compagnia, questo appartamento offre due zone notte separate e finemente arredate. La soluzione ideale per vivere Verona insieme senza rinunciare alla propria indipendenza, con ambienti luminosi e dotati di ogni comfort moderno.</p>
+                
+                <div class="amenities-grid">
+                    <h3>Servizi Inclusi</h3>
+                    <ul>
+                        <li>Superficie appartamento: 50 m²</li>
+                        
+                        <li>Camera 1: 1 letto matrimoniale large</li>
+                        <li>Camera 2: 1 letto matrimoniale large</li>
+                        
+                        <li>Letti comodi (punteggio: 9,2) in base a 570 recensioni</li>
+                        
+                        <li>Bagni: 2</li>
+                        
+                        <li>Questo appartamento climatizzato comprende 2 camere da letto e 2 bagni con doccia e bidet.</li>
+                        <li>La cucina è completa di frigorifero, piano cottura, forno e utensili.</li>
+                        <li>Affacciata sulla città, la sistemazione dispone di pareti insonorizzate e 
+                            TV a schermo piatto. Presenta 2 letti.</li>
+
+                            <li><strong>Fumatori:  è vietato fumare</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="booking-sidebar">
+                <div class="sticky-box">
+                    <p>Ti piace questa stanza?</p>
+                    <a href="https://wa.me/393881221218?text=Buongiorno, vorrei informazioni per l'Appartamento con 2 Camere da Letto" class="wa-btn-room" target="_blank">
+                        Richiedi disponibilità
+                    </a>
+                    <p style="font-size: 0.8rem; color: #888;">Risposta immediata su WhatsApp</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-brand">
+            <h3>Residenza Elisabetta</h3>
+        </div>
+        
+        <div class="footer-details">
+            <p><strong>Carla Patuzzo S.r.l.</strong></p>
+            <p>Sede: Via Amanti, 9 - 37121 Verona (VR)</p>
+            <p>P.IVA: [La tua Partita IVA]</p>
+            <p>Email: <a href="mailto:residenzaelisabetta@gmail.com" class="footer-email">residenzaelisabetta@gmail.com</a></p>
+        </div>
+
+        <div class="footer-bottom">
+    <p>&copy; 2026 Residenza Elisabetta - Tutti i diritti riservati</p>
+    <p><a href="privacy-policy.html" style="color: #777; text-decoration: underline; font-size: 0.7rem;">Privacy & Cookie Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+<div id="cookie-overlay" class="cookie-modal-overlay">
+    <div class="cookie-card">
+        <div class="cookie-header">
+            <span>🍪</span>
+            <h3>Informativa sui Cookie</h3>
+        </div>
+        <div class="cookie-body">
+            <p>Utilizziamo i cookie per garantire le funzionalità di base del sito web e per migliorare la tua esperienza online. Puoi scegliere per ogni categoria di opt-in/out quando vuoi. Per maggiori dettagli relativi ai cookie e ad altri dati sensibili, leggi la <a href="privacy-policy.html" class="cookie-link">privacy policy</a> completa.</p>
+        </div>
+        <div class="cookie-footer">
+            <button onclick="acceptCookies()" class="btn-cookie accept">Accetto</button>
+            <button onclick="closeCookies()" class="btn-cookie refuse">Solo essenziali</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-overlay').classList.add('show');
+        }
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-overlay').classList.remove('show');
+    }
+
+    function closeCookies() {
+        // Chiude il popup trattando il rifiuto come accettazione dei soli tecnici
+        document.getElementById('cookie-overlay').classList.remove('show');
+    }
+</script>
+
+</body>
+</html>

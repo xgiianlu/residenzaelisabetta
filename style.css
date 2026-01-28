@@ -1,0 +1,471 @@
+:root {
+    --verona-red: #A03636;
+    --verona-cream: #F9F4EE;
+    --verona-marble: #D9C5B2;
+    --dark: #2D2D2D;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--verona-cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+/* --- HEADER CENTRATO --- */
+header {
+    background: #ffffff;
+    padding: 1.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--verona-red);
+    text-align: center;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex !important;
+    justify-content: center;
+    gap: 25px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/hero-verona.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* --- BANNER PET FRIENDLY AGGIORNATO --- */
+.pet-banner {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 20px 5%;
+}
+
+.pet-banner-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Spazio tra icone e testo */
+}
+
+.pet-icon {
+    font-size: 1.8rem;
+    opacity: 0.7; /* Rende le icone più discrete ed eleganti */
+    color: var(--verona-red); /* Usa il rosso della struttura per le zampe */
+}
+
+.pet-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+}
+
+.lang-it {
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.lang-en {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* Ottimizzazione per Mobile */
+@media (max-width: 768px) {
+    .pet-banner {
+        padding: 15px 10px;
+    }
+
+    .pet-banner-content {
+        gap: 15px;
+    }
+    
+    .pet-icon {
+        font-size: 1.4rem;
+    }
+
+    .lang-it {
+        font-size: 0.85rem;
+    }
+
+    .lang-en {
+        font-size: 0.75rem;
+    }
+}
+
+/* --- GRIGLIA ALLOGGI --- */
+.container { padding: 4rem 5%; max-width: 1200px; margin: auto; }
+.section-title { text-align: center; margin-bottom: 3rem; color: var(--verona-red); font-size: 2.5rem; }
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.room-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card:hover { transform: translateY(-5px); }
+
+/* Fix Nitidezza Immagini */
+.room-img-container {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.room-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.room-info { padding: 1.5rem; text-align: center; }
+.room-info span { color: #888; font-size: 0.8rem; text-transform: uppercase; }
+.room-info h3 { margin: 5px 0 15px 0; }
+
+.btn-detail {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--verona-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+/* --- PAGINA STANZA: GALLERIA --- */
+.gallery-container {
+    display: flex;
+    gap: 10px;
+    height: 450px;
+    margin-bottom: 3rem;
+}
+
+.main-photo-container { flex: 2; border-radius: 15px; overflow: hidden; }
+.side-photos-container { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.side-photo-item { flex: 1; border-radius: 15px; overflow: hidden; }
+
+.main-photo-container img, .side-photo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.room-content { display: flex; gap: 50px; align-items: start; }
+.room-description { flex: 2; }
+.booking-sidebar { flex: 1; }
+
+.amenities-grid { margin-top: 2rem; background: white; padding: 2rem; border-radius: 15px; }
+.amenities-grid ul { 
+    display: grid; grid-template-columns: 1fr 1fr; list-style: none; gap: 15px; margin-top: 1rem;
+}
+
+.sticky-box {
+    background: white; padding: 2rem; border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center;
+    position: sticky; top: 120px;
+}
+
+.wa-btn-room {
+    display: block; background: #25D366; color: white; padding: 15px;
+    text-decoration: none; border-radius: 10px; font-weight: bold; margin: 1rem 0;
+}
+
+/* --- WHATSAPP FLOAT --- */
+.wa-btn {
+    position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white;
+    padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .logo { font-size: 1.4rem; }
+    header ul { gap: 15px; }
+    header ul li a { font-size: 0.8rem; }
+    
+    .section-title { font-size: 1.8rem; }
+
+    /* Galleria Mobile: mostra tutto */
+    .gallery-container { flex-direction: column; height: auto; }
+    .main-photo-container { height: 250px; }
+    .side-photos-container { flex-direction: row; height: 120px; }
+    
+    .room-content { flex-direction: column; }
+    .amenities-grid ul { grid-template-columns: 1fr; }
+    .sticky-box { position: static; margin-top: 2rem; }
+}
+
+/* --- FIX MAPPA --- */
+.map-box {
+    width: 100%;
+    max-width: 1000px; /* Larghezza massima per non disperderla troppo su schermi giganti */
+    margin: 0 auto;    /* Centra il contenitore */
+    border-radius: 15px;
+    overflow: hidden;  /* Applica il bordo arrotondato anche alla mappa */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-iframe {
+    width: 100%;       /* Occupa tutta la larghezza del map-box */
+    height: 450px;     /* Altezza fissa per Desktop */
+    border: 0;
+    display: block;    /* Rimuove spazi bianchi sotto l'iframe */
+}
+
+/* Adattamento per Mobile */
+@media (max-width: 768px) {
+    .map-iframe {
+        height: 300px; /* Più bassa su mobile per facilitare lo scroll della pagina */
+    }
+    
+    .map-box {
+        border-radius: 10px;
+    }
+}
+
+/* --- SEZIONE ATTIVITÀ --- */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.activity-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid rgba(160, 54, 54, 0.1); /* Leggero bordo rosso Verona */
+}
+
+.activity-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.activity-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.activity-item h3 {
+    color: var(--verona-red);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.activity-item p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Adattamento Mobile */
+@media (max-width: 768px) {
+    .activity-grid {
+        grid-template-columns: 1fr; /* Una colonna su mobile */
+    }
+}
+
+.btn-map {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    border: 1px solid var(--verona-red);
+    color: var(--verona-red);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-map:hover {
+    background-color: var(--verona-red);
+    color: white;
+}
+
+/* Allineamento degli elementi nella card attività */
+.activity-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spinge il bottone sempre in fondo */
+    height: 100%;
+}
+
+/* --- FOOTER ESSENZIALE (SENZA LINEA ROSSA) --- */
+.main-footer {
+    background-color: var(--dark);
+    color: #ffffff;
+    padding: 40px 0 20px 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--verona-marble);
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.footer-details p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Stile specifico per l'email: nessuna linea, colore bianco */
+.footer-email {
+    color: white;
+    text-decoration: none; /* Rimuove la sottolineatura standard */
+    transition: 0.3s;
+}
+
+.footer-email:hover {
+    color: var(--verona-red); /* L'email diventa rossa solo quando ci passi sopra */
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    font-size: 0.75rem;
+    color: #777;
+}
+
+/* --- COOKIE MODAL CENTRALE --- */
+.cookie-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sfondo scurito */
+    backdrop-filter: blur(3px); /* Sfocatura sfondo */
+    display: none; /* Nascosto di base */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Sopra a tutto, anche a WhatsApp */
+}
+
+.cookie-modal-overlay.show {
+    display: flex;
+}
+
+.cookie-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    animation: fadeInScale 0.4s ease-out;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.cookie-header span { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+.cookie-header h3 { color: var(--verona-red); margin-bottom: 15px; }
+
+.cookie-body p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.cookie-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-cookie {
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cookie.accept {
+    background-color: var(--verona-red);
+    color: white;
+}
+
+.btn-cookie.refuse {
+    background-color: #f0f0f0;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.btn-cookie:hover { transform: translateY(-2px); opacity: 0.9; }
